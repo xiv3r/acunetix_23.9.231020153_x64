@@ -33,6 +33,7 @@
 
 - Let's replace `wvsc` file:
  ```
+  sudo mkdir -p /home/acunetix/.acunetix/v_231020153/scanner
   sudo cp wvsc /home/acunetix/.acunetix/v_231020153/scanner/wvsc
   sudo chown acunetix:acunetix /home/acunetix/.acunetix/v_231020153/scanner/wvsc
   sudo chmod +x /home/acunetix/.acunetix/v_231020153/scanner/wvsc
@@ -41,14 +42,15 @@
 - Time to add licenses:
  
  ```
-  sudo rm /home/acunetix/.acunetix/data/license/* (Pay attention to copy and paste right, this can damage your entire OS!!!)
+  sudo rm /home/acunetix/.acunetix/data/license/*
+  sudo mkdir -p /home/acunetix/.acunetix/data/license
   sudo cp license_info.json /home/acunetix/.acunetix/data/license/
   sudo cp wa_data.dat /home/acunetix/.acunetix/data/license/
   sudo chown acunetix:acunetix /home/acunetix/.acunetix/data/license/license_info.json
   sudo chown acunetix:acunetix /home/acunetix/.acunetix/data/license/wa_data.dat
   sudo chmod 444 /home/acunetix/.acunetix/data/license/license_info.json
   sudo chmod 444 /home/acunetix/.acunetix/data/license/wa_data.dat
-  sudo chattr +i /home/acunetix/.acunetix/data/license/license_info.json (Pay attention to copy and paste right, this can damage your entire  OS!!!)
+  sudo chattr +i /home/acunetix/.acunetix/data/license/license_info.json
   sudo chattr +i /home/acunetix/.acunetix/data/license/wa_data.dat
 ```
 
